@@ -2,7 +2,7 @@ package JavaBasic.Lab02;
 
 import java.util.Scanner;
 
-public class Lab02_2_3 {
+public class Lab02_3 {
     public static void main(String[] agrs) {
         // Scanner 객체 생성
         Scanner scan = new Scanner(System.in);
