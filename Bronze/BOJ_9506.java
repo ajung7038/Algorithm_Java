@@ -29,7 +29,7 @@ public class BOJ_9506 {
     }
      */
     public static void main(String[] args) {
-        int[] nums = new int[100];
+        int[] nums = new int[10];
         int i = 0;
         Scanner scan = new Scanner(System.in);
         while ((nums[i] = scan.nextInt()) != -1) {
