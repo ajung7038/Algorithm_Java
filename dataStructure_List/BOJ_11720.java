@@ -1,4 +1,4 @@
-package 자료구조.배열과_리스트;
+package dataStructure_List;
 
 import java.util.Scanner;
 
