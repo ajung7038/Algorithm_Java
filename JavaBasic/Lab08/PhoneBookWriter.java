@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class PhoneBookWriter {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		// Scanner 객체 선언
 		Scanner scan = new Scanner(System.in);
 		// File 생성 - "C:/classJava/2000000_JAVA/Lab08/phone.txt" --> 본인 워크스페이스에 맞게 설정
@@ -37,8 +37,15 @@ public class PhoneBookWriter {
 			e.printStackTrace();
 		} finally {
 			// fileWriter != null --> fileWriter.close() & Scanner close()  with try&catch
-			if (fw != null) fw.close();
-			scan.close();
+			if (fw != null) {
+				try {
+					fw.close();
+					scan.close();
+				}
+				catch(IOException e){
+
+				}
+			}
 		}
 	}
 
