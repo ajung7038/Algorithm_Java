@@ -66,3 +66,24 @@
   </tr>
 
 </table>
+
+## 자바 기초 공부
+
+> 매주 월요일 계획 업데이트 예정
+
+<table align = "center">
+  <tr align = "center">
+    <td>날짜</td>
+    <td>문제</td>
+    <td>풀이</td>
+    <td>복습</td>
+  </tr>
+  <tr align = "center">
+    <td>20240101</td>
+    <td>BOJ_10807 : 개수 세기</td>
+    <td>O</td>
+    <td></td>
+  </tr>
+  
+
+</table>
