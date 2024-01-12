@@ -18,6 +18,7 @@ public class BOJ_1913 {
 
     public static void main (String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
 
         int N = Integer.parseInt(br.readLine()); // 홀수인 자연수 N
         int location = Integer.parseInt(br.readLine()); // 찾고자 하는 N^2 이하 자연수 위치
@@ -38,34 +39,21 @@ public class BOJ_1913 {
         while (count != 0) {
             // N인 경우 (1번 반복)
             if (z == N) {
-                arr[x][y] = count--;
-                for (int i=0; i<z-1; i++) { // 2번
-                    x += dx[k];
-                    y += dy[k];
-                    arr[x][y] = count--;
-                }
-                // 방향 바꾸기
-                if (k == 4) {
-                    k = 0;
+                arr[1][1] = count--;
+                for (int i=0; i<z-1; i++) {
+                    arr[x += dx[k]][y += dy[k]] = count--;
                 }
                 k++;
                 z--;
             }
             // 아니면 (2번 반복)
             else {
-                for (int i=0; i<2; i++) { // 2번
-                    for (int j=0; j<z; j++) { // 2번
-                        x += dx[k];
-                        y += dy[k];
-                        arr[x][y] = count--;
+                for (int i=0; i<2; i++) {
+                    for (int j=0; j<z; j++) {
+                        arr[x += dx[k]][y += dy[k]] = count--;
                     }
                     // 방향 바꾸기
-                    if (k == 3) {
-                        k = 0;
-                    }
-                    else {
-                        k++;
-                    }
+                    k = k==3? 0: (k+=1);
                 }
                 z--;
             }
@@ -75,10 +63,15 @@ public class BOJ_1913 {
         for (int i=1; i<N+1; i++) {
             for (int j=1; j<N+1; j++) {
                 System.out.print(arr[i][j] + " ");
+                if (arr[i][j] == location) {
+                    x = i;
+                    y = j;
+                }
             }
             System.out.println();
         }
 
         // 입력받은 자연수의 좌표 출력
+        System.out.print(x + " " + y);
     }
 }
