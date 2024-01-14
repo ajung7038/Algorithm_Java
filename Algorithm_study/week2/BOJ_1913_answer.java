@@ -4,6 +4,7 @@ import java.io.*;
 
 public class BOJ_1913_answer {
     public static void main(String[] args) throws IOException {
+        // .
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         int N = Integer.parseInt(br.readLine());
@@ -54,6 +55,6 @@ public class BOJ_1913_answer {
             sb.append("\n");
         }
         sb.append(tx+" " + ty);
-        System.out.println(sb.toString());
+        System.out.println(sb);
     }
 }
