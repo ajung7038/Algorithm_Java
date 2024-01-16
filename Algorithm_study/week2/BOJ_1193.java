@@ -4,28 +4,24 @@ import java.io.*;
 
 public class BOJ_1193 {
     public static void main(String[] args) throws IOException {
-        // 2차원 배열
-        // (i, j)에서 i == 1이면 오른쪽으로 이동
-        // (i, j)에서 j == 1이면 아래로 이동
-        // else : i--, j++ (1이 나올 때까지)
-
-        // 입력
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int X = Integer.parseInt(br.readLine());
-        Long[][] board = new Long[10000000][10000000];
 
-        for (int i=1; i<=X; i++) {
-            for (int j=1; j<=X; j++) {
-                if (i == 1) {
-                    j += 1;
+        // 출력 예시 : 1 -> 1/1
+        int X = Integer.parseInt(br.readLine());
+        br.close();
+
+        int squareCount = 1;
+        int squareSum = 0; // 해당 대각선의 전 대각선 칸 누적 변수
+
+        while (true) {
+            if (X <= squareSum + squareCount) {
+                if (squareCount % 2 == 1) {
+                    System.out.println((squareCount - (X - squareSum - 1)));
+                    break;
                 }
-                else if (j == 1) {
-                    i += 1;
-                }
-                else {
-                    i--;
-                    j++;
-                }
+            } else {
+                squareSum += squareCount;
+                squareCount++;
             }
         }
     }
