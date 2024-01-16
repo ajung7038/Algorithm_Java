@@ -16,7 +16,10 @@ public class BOJ_1193 {
         while (true) {
             if (X <= squareSum + squareCount) {
                 if (squareCount % 2 == 1) {
-                    System.out.println((squareCount - (X - squareSum - 1)));
+                    System.out.println((squareCount - (X - squareSum - 1) + "/" + (X - squareSum)));
+                    break;
+                } else {
+                    System.out.println((X - squareSum) + "/" + (squareCount - (X - squareSum - 1)));
                     break;
                 }
             } else {
