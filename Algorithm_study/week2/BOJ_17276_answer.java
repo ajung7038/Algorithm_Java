@@ -8,7 +8,8 @@ import java.util.StringTokenizer;
 public class BOJ_17276_answer {
 
     static int n, d;
-    static int[][] arr, copy;
+    static int[][] arr;
+    static int[][] copy;
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer stringTokenizer;
@@ -23,6 +24,7 @@ public class BOJ_17276_answer {
 
             if(d < 0)
                 d += 360;
+            
             d /= 45;
 
             arr = new int[n][n];
