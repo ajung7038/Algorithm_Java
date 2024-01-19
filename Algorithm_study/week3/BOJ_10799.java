@@ -21,7 +21,7 @@ public class BOJ_10799 {
                 continue;
             }
 
-            // 괄호가 닫혀 있을 경우 스택에서 꺼내기
+            // 괄호가 닫혀 있을 경우 스택에서 '(' 꺼내기
             if (input.charAt(i) == ')') {
                 stack.pop();
 
