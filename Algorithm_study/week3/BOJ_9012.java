@@ -16,19 +16,16 @@ public class BOJ_9012 {
             for (char c : str.toCharArray()) {
                 if (c == '(') {
                     stack.push(c);
+                } else if (stack.isEmpty()) {
+                    stack.push(c);
+                    break;
+                } else if (stack.get(stack.size()-1) == '(') {
+                    stack.pop();
+                } else {
+                    stack.push(c);
+                    break;
                 }
-                else {
-                    if (stack.isEmpty()) {
-                        stack.push(c);
-                        break;
-                    }
-                    else if (stack.get(stack.size()-1) == '(') {
-                        stack.pop();
-                    } else {
-                        stack.push(c);
-                        break;
-                    }
-                }
+
             }
             if (stack.isEmpty()) {
                 bw.write("YES");
