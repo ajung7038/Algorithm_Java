@@ -13,7 +13,7 @@ public class BOJ_5_2844 {
         int h = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
 
-        if (m>45) System.out.println(h + " " + (m-45));
+        if (m>=45) System.out.println(h + " " + (m-45));
         else if (h == 0) System.out.println(23 + " " + (m+15));
         else System.out.println((h-1) + " " + (m+15));
     }
