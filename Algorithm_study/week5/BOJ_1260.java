@@ -52,7 +52,7 @@ public class BOJ_1260 {
         visited[v] = true;
         sb.append(v).append(" ");
 
-        for (int i=0; i<N+1; i++) {
+        for (int i=1; i<N+1; i++) {
             if (graph[v][i] == 1 && !visited[i]) dfs(i);
         }
     }
